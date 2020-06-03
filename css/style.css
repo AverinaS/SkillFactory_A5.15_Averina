@@ -1,0 +1,64 @@
+.wrapper {
+	display: flex; /*Внутренние div-ы выстраиваются
+	 в ряд (вдоль главной оси) колонками одинаковой
+	  высоты, независимо от содержимого.*/
+	 font-family: sans-serif;
+	 font-size: 16px;
+	 line-height: 20px;
+}
+.block {
+	width: 250px;
+	padding: 10px 20px; /*первая цифра - верх-низ, вторая - лево-право*/
+}
+.placeholder {
+	margin-bottom: 5px; /*внеш.отступ от надписи до поля ввода*/
+}
+.input {
+	width: 100%; /*от родит.элемента block (width: 250px)*/
+	box-sizing: border-box; /*позволяет значения padding и border вычитать из ширины и длины блока*/
+	padding: 5px; /*отступы от текста до границ инпута*/
+	font-size: 14px;
+	line-height: 15px; /*высота строки, не знаю зачем, если уже указан паддинг*/
+	border-radius: 5px;	
+
+}
+.text {
+	width: 250px;
+	margin-left: 10px;
+
+}
+.btn {
+	padding: 0;
+	
+	/*border: 5px solid;
+	/*outline: 5px solid;*/
+	-webkit-tap-highlight-color: transparent;
+	/*юзер-френдли интерфейс должен реагировать
+	на действия пользователя. Поэтому в качестве
+	подстраховки для недоделанного дизайна браузер
+	подсвечивает нажатую ссылку. Если же вы вешаете
+	какое-то свойство (реакцию) на a:active, то надо
+	добавить и свойство -webkit-tap-highlight-color 
+	с параметром transparent, т.к. вы уже 
+	позаботились о визуализации нажатия. 
+	Проблем никаких не будет, красота только будет.*/
+	box-shadow: none;
+	cursor: pointer;
+
+	margin: 5px 20px;
+	padding: 15px 15px;
+	border-radius: 10px;
+	font-size: 16px;
+	text-transform: uppercase;
+	color: white;
+	background: blue;
+
+}
+
+/*Определяет стиль элемента при наведении на
+него курсора мыши, но при этом элемент еще
+не активирован, кнопка мыши не нажата.*/
+.btn:hover {
+	box-shadow: 50px 52px 58px 52px rgba(150,150,150,.1); /*никакие тени не появляются. Почему?*/
+	transform: scale(1.05); /*кнопка увелич.при наведении*/
+} 
